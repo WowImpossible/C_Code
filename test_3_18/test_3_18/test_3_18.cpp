@@ -14,13 +14,19 @@ int my_strlen(const char* p)//const修饰的是*p，*p的值不能变了
 	return count;
 }
 
+//int main()
+//{
+//	//之前没有给arr初始化的时候，出现了stack around the variable 'arr' was corrupted(即arr附近的栈被破坏，是因为没定义大小，导致操作到了没有申请的空间)
+//	char arr[100] = { 0 };
+//	int ret = 0;
+//	scanf("%s", arr);
+//	ret = my_strlen(arr);
+//	printf("strlen(arr) = %d\n", ret);
+//	return 0;
+//}
 int main()
 {
-	//之前没有给arr初始化的时候，出现了stack around the variable 'arr' was corrupted(即arr附近的栈被破坏，是因为没定义大小，导致操作到了没有申请的空间)
-	char arr[100] = { 0 };
-	int ret = 0;
-	scanf("%s", arr);
-	ret = my_strlen(arr);
-	printf("strlen(arr) = %d\n", ret);
+	char ret = '\0';
+	printf("ret = %d\n", ret);
 	return 0;
 }
